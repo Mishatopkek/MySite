@@ -1,0 +1,129 @@
+/*Основа*/
+
+*{
+	margin: 0; /* Убираем отступы */
+	padding: 0; /* Поля вокруг текста */
+	/*outline: none;*/
+}
+
+
+body {
+	width: 100%; /*Ширина*/
+	height: 100%; /*Высота*/
+	color: #fff; /*Цвет*/
+	background: #2f3136; /*Задний фон*/
+	font-size: 1.4em; /*Размер шрифта*/
+	font-family: "Times new roman", sans-serif; /*Тип шрифта*/
+	line-height: 135%; /*Межстрочный интервал текста*/
+}
+
+a {
+	color: #DDDDDD; /*Цвет*/
+	text-decoration: none; /*Убираем подчеркивание у ссылок*/
+	
+}
+
+a:hover {
+	color: #FFFFFF; /*Цвет*/
+	text-decoration: none; /*Убираем подчеркивание у ссылок*/
+	transition: all.6s ease; /*Устанавливает эффект перехода между двумя состояниями элемента*/
+	-moz-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+a:active {color: #ce4a;}
+
+img {
+	max-width: 100%; /*Максимальная ширина страницы*/
+	height: auto; /*Высота*/
+	width: auto; /*Ширина*/
+}
+header, footer {
+	width: 98%; /*Ширина*/
+	background-color: #292b2f;
+	float: left; /*Обтекание по правому краю*/
+}
+
+header {
+	border-bottom: 2px solid #1f1f1f;
+	padding: 1%; /*Отступ слева и справа*/
+}
+
+footer {
+	border-top: 2px solid #1f1f1f;
+	margin-top: 10px;
+	padding: 1%;
+	padding-bottom: 2%;
+}
+
+footer img {width: 5%}
+/*Основа*/
+
+#menu {
+    text-align: center; 
+    background-color: #8E9297;
+    font-size: 1.7em;
+    padding: 20px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.wrapper {
+	margin-left: 20px;
+	margin-right:20px;
+}
+
+.right {float: right}  /*Обтекание по левому краю*/
+
+.left {float: left} /*Обтекание по правому краю*/
+
+ol {margin-left: 10px}
+
+table {
+	border-spacing: 7px 11px;
+	border: 2px solid black;
+	margin: auto;
+}
+.colG {
+	background: green;
+}
+.colR {
+	background: red;
+}
+.colO {
+	background: orange;
+}
+.colB {
+	background: blue;
+}
+td {
+	padding: 10px;
+}
+
+#Font_text {
+	font-size: 1.9em;
+	padding: 25px;
+}
+
+b {
+	color: white;
+}
+
+/*Футер прикреплен к низу сайта*/
+
+html {height: 100%}
+
+#page-wrap:after {
+	content: "";
+	display: block;
+}
+
+footer, #page-wrap:after {height: 10px}
+
+#page-wrap {
+	min-height: 94%;
+	margin-bottom: -10px; 
+}
+/*Футер прикреплен к низу сайта*/

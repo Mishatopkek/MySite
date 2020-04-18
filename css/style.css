@@ -1,32 +1,29 @@
-/*Основа*/
-
 *{
-	margin: 0; /* Убираем отступы */
-	padding: 0; /* Поля вокруг текста */
-	/*outline: none;*/
+	margin: 0;
+	padding: 0;
 }
 
 
 body {
-	width: 100%; /*Ширина*/
-	height: 100%; /*Высота*/
-	color: #fff; /*Цвет*/
-	background: #2f3136; /*Задний фон*/
-	font-size: 1.4em; /*Размер шрифта*/
-	font-family: "Times new roman", sans-serif; /*Тип шрифта*/
-	line-height: 135%; /*Межстрочный интервал текста*/
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	background: #2f3136;
+	font-size: 1.4em;
+	font-family: "Times new roman", sans-serif;
+	line-height: 135%;
 }
 
 a {
-	color: #DDDDDD; /*Цвет*/
-	text-decoration: none; /*Убираем подчеркивание у ссылок*/
+	color: #DDDDDD;
+	text-decoration: none;
 	
 }
 
 a:hover {
-	color: #FFFFFF; /*Цвет*/
-	text-decoration: none; /*Убираем подчеркивание у ссылок*/
-	transition: all.6s ease; /*Устанавливает эффект перехода между двумя состояниями элемента*/
+	color: #FFFFFF;
+	text-decoration: none;
+	transition: all.6s ease;
 	-moz-transition: all.6s ease;
 	-ms-transition: all.6s ease;
 }
@@ -34,19 +31,19 @@ a:hover {
 a:active {color: #ce4a;}
 
 img {
-	max-width: 100%; /*Максимальная ширина страницы*/
-	height: auto; /*Высота*/
-	width: auto; /*Ширина*/
+	max-width: 100%;
+	height: auto;
+	width: auto;
 }
 header, footer {
-	width: 98%; /*Ширина*/
+	width: 98%;
 	background-color: #292b2f;
-	float: left; /*Обтекание по правому краю*/
+	float: left;
 }
 
 header {
 	border-bottom: 2px solid #1f1f1f;
-	padding: 1%; /*Отступ слева и справа*/
+	padding: 1%;
 }
 
 footer {
@@ -57,11 +54,10 @@ footer {
 }
 
 footer img {width: 5%}
-/*Основа*/
+
 
 #menu {
     text-align: center; 
-    background-color: #8E9297;
     font-size: 1.7em;
     padding: 20px;
 }
@@ -75,11 +71,11 @@ h1 {
 	margin-right:20px;
 }
 
-.right {float: right}  /*Обтекание по левому краю*/
+.right {float: right}
 
-.left {float: left} /*Обтекание по правому краю*/
+.left {float: left}
 
-ol {margin-left: 10px}
+ul {margin-left: 20px}
 
 table {
 	border-spacing: 7px 11px;
@@ -111,7 +107,6 @@ b {
 	color: white;
 }
 
-/*Футер прикреплен к низу сайта*/
 
 html {height: 100%}
 
@@ -126,4 +121,3 @@ footer, #page-wrap:after {height: 10px}
 	min-height: 94%;
 	margin-bottom: -10px; 
 }
-/*Футер прикреплен к низу сайта*/

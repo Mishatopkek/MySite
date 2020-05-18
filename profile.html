@@ -16,7 +16,8 @@
 <div id="page-wrap">
 	<div class="wrapper">
 			<br><br><br><br><br><br><br>
-		<table >
+			<form method="POST" action="mailto:svetkovalenko@gmail.com?subject=Regestration form" target="_blank">
+		<table>
 	<colgroup>
 		<col style="width: 40%;">
 		<col style="width: 60%;">
@@ -30,15 +31,19 @@
 		</tr>
 		<tr>
 			<td>Имя: *</td>
-			<td><input placeholder="Dimon2011"></td>
+			<td><input type="text" name="name" placeholder="Dimon2011"></td>
 		</tr>
 		<tr>
 		<td> Пароль: *</td>
-		<td><input placeholder="pass123"></td>
+		<td><input type="password" name="pass" placeholder="pass123"></td>
+		</tr>
+		<tr>
+			<td>Номер телефона: </td>
+			<td><input type="tel"  pattern="[0-9]{3}-[0-9]{2}-[0-9]{4}" name="phoneNumber" placeholder="###=###-####"></td>
 		</tr>
 		<tr><td>Email: *</td>
 		<td>
-			<input placeholder="outofmemory@gmail.com">
+			<input type="email" name="EMail" placeholder="outofmemory@gmail.com">
 			<h6>(На этот адрес вам будет отправлено письмо для завершения регистрации)</h6>
 		</td>
 		</tr>
@@ -46,35 +51,35 @@
 		<td>Код подтверждения: *</td>
 		<td>
 			<div><img src="img/capcha.jpg"alt="pic"></div>
-			<input placeholder="qwertz">
+			<input type="number" name="capcha" placeholder="qwertz">
 		</td>
 	</tr>
 		<tr>
 		<td>Откуда:</td>
 		<td>
-		<select>
-			<option>&nbsp;» Откуда вы?&nbsp;</option>
-			<option>&nbsp;ХНТУСГ&nbsp;</option>
-			<option>&nbsp;Харьков&nbsp;</option>
-			<option>&nbsp;Другое&nbsp;</option>
+		<select name="Where">
+			<option disabled>&nbsp;» Откуда вы?&nbsp;</option>
+			<option value="KHNTUSG">&nbsp;ХНТУСГ&nbsp;</option>
+			<option value="Kharkov">&nbsp;Харьков&nbsp;</option>
+			<option value="Other">&nbsp;Другое&nbsp;</option>
 		</select>
 </td>
 	</tr>
 	<tr>
 		<td>Пол:</td>
 		<td>
-<select>
-		<option>&nbsp;Засекречен&nbsp;</option>
-		<option>&nbsp;Женский&nbsp;</option>
-		<option>&nbsp;Мужской&nbsp;</option>
-</select>
+			<input type="radio" name="sex" value="Secret">Засекречений
+			<input type="radio"  name="sex" value="Man">Чоловік
+            <input type="radio" name="sex" value="Woman">Жінка
 		</td>
 	</tr>
 		<tr>
 		<td></td>
-		<td><button>Отправить</button></td>
+		<td><input type="reset" value="Вилучити">
+			<input type="submit" value="Відправити">
 		</tr>
 	</tbody></table>
+</form>
 </div>
 </div>
 <footer>

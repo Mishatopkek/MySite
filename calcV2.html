@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Калькулятор</title>
+	<title>КалькуляторV2</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="img/Note.ico">
@@ -16,18 +16,22 @@
 <div id="page-wrap">
 <div class="wrapper">
 <br><br><br><br><br><br><br>
-<form align="center">
-     <img src="img/exercise.png">
-     <p>Введіть значення:</p>
-     <p>a: <input type="number" id="aValue" placeholder="Введіть а"></p>
-     <p>b: <input type="number" id="bValue" placeholder="Введіть b"></p>
-     <p>x: <input type="number" id="xValue" placeholder="Введіть c"></p>
-     <br>
-     <input type="button" value="Обчислити" onclick="solver()">
-     </form>
-     <p align="center" id="result_y"></p>
-     <p align="center" id="result_s"></p>
-     <script src="script.js"></script>
+<h1>КОля не забудь поменять эти буковки</h1><br>
+<div align="center">
+  <input type="number" name="imput">
+  <input type="number" name="imput">
+  <input type="number" name="imput">
+  <input type="number" name="imput">
+  <input type="number" name="imput">
+</div>
+<div align="center">
+  <input type="button" class="btn" value="Обчислити" onclick="solver()">
+  <input type="button" class="btn" value="Очистити" id="clear">
+</div>
+<div>
+  <p id="result"></p>
+  </div>
+  <script src="CalcV2.js"></script>
 </div>
 </div>
 <footer>

@@ -26,7 +26,7 @@ document.querySelector("#clear").onclick=function(){
 function solver(){
 	checkFlag();
 	if(flag){
-		document.querySelector("#result").textContent="Самое меньше среди читал " + calc() +  " цифр";
+		document.querySelector("#result").textContent="Найменше шестизначне число: " + calc();
 	}
 }
 function calc(){

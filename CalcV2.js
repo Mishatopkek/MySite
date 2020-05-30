@@ -26,15 +26,26 @@ document.querySelector("#clear").onclick=function(){
 function solver(){
 	checkFlag();
 	if(flag){
-		document.querySelector("#result").textContent="Найменше шестизначне число: " + calc();
+		document.querySelector("#result").textContent="Найменше число, сума кожного елемента це: " + calc();
 	}
 }
 function calc(){
-	let temp =inputVar[0]
-	let count = 0;
-		for(let i = 1; i < 5; i++){
-			if(temp < inputVar[i])
-				count = i;
-			}
-		return inputVar[count].value;
+		let min = 999999;
+		let temp = 0;
+		let tempNum;
+		let idCalc = 0;
+	for (let i = 0; i < 5; i++) {
+		tempNum = inputVar[i].value;
+		for(let j = 0; j < 6; j++){
+			temp += tempNum % 10;
+			tempNum = Math.floor(tempNum / 10);
+		}
+		if(min > temp)
+		{
+			min = temp;
+			idCalc = i;
+		}
+		temp = 0;
+	}
+	return inputVar[idCalc].value;
 }

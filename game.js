@@ -1,6 +1,6 @@
 let cnv = document.getElementById('cnv');
 let ctx = cnv.getContext('2d');
-let a = document.getElementById("secret_mode");
+let activator = location.search.split('secret=')[1];
 
 let w = window.innerWidth / 1.05; //Без этого кастыля, я не знаю как избавиться от scroolbar'а слево-направо
 let h = window.innerHeight / 1.41; //Без этого UI сверху будет мешать змейке, снизу не будет видно футер
@@ -12,7 +12,7 @@ let sw = ~~(w / s) - 1; //Кол-во квадратов по ширине
 let sh = ~~(h / s) - 1; //Кол-во квадратов по высоте
 let border = 4; //Толщина контура
 
-let speed = a ? 50 : 200;
+let speed = activator ? 50 : 200;
 let dirChanged = false; //Чтобы змейка сама себя не убила
 let dir = 1;
 let snake = [];
@@ -38,7 +38,7 @@ function newFood() {//Каждый раз генерирует еду
 	} while(!valid); //Если убрать восклецательный знак, еда всезда будет спавниться в змейке XD
 }
 
-function newSnake() {
+function newSnake() { //Создает змею, если была впервые запущена игра, или была съедена собой-же
 	dir = 1;
 	snake = [];
 	for (let i = 0; i < 3; i++) {
@@ -52,17 +52,17 @@ document.onkeydown = keyDown;
 update();
 function update() { //Действие происходит каждые кадр
 	ctx.clearRect(0, 0, w, h);
-	ctx.fillStyle = '#1F1F1F';
+	ctx.fillStyle = '#1F1F1F'; //Цвет  рамок
 	for (let i = 0; i <= sw; i++) { //Цикл чтобы расставить квадраты по высоте
 		ctx.fillRect(i * s, 0, border, sh * s + border);
 	}
 	for (let i = 0; i <= sh; i++) { //Цикл чтобы расставить квадраты по ширине
 		ctx.fillRect(0, i * s, sw * s + border, border);
 	}
-  ctx.fillStyle = '#47d';
+  ctx.fillStyle = '#47d'; //Цвет еды
 	ctx.fillRect(foodX * s + border, foodY * s + border, s - border, s - border);
-	if (a)
-  		ctx.fillStyle = '#'+Math.floor(Math.random()*2**24).toString(16).padStart(6, '0');//Змейка меняет всё время цвет
+	if (activator)
+  		ctx.fillStyle = '#'+Math.floor(Math.random()*2**24).toString(16).padStart(6, '0');//Змейка меняет цвет каждое выполнение функции
 	else
 		ctx.fillStyle = '#faf'//Просто розовая змейка
 	let dx = snake[0].x;
